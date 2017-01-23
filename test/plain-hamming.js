@@ -9,6 +9,8 @@ test('\nhamming results', function(t) {
   t.equal(ph('hello', 'h3ll0'), 2)
   // ignores the fact that they are both of unequal length
   t.equal(ph('hello', 'he llo'), 2)
+  // checks more chars since first string is longer
+  // users need to check validity of input strings themselves
   t.equal(ph('he llo', 'hello'), 3)
   t.end()
 })
